@@ -1,3 +1,5 @@
+
+import './Modal.css';
 import { createPortal } from 'react-dom';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -27,19 +29,19 @@ export class Modal extends Component {
 
   render() {
     const { largeImageURL } = this.props.image;
-
     return createPortal(
-      <div class="overlay" onClick={this.onOverlayClose}>
-        <div class="modal">
+      <div onClick={this.onOverlayClose} className="Overlay">
+        <div className="Modal">
           <img src={largeImageURL} alt="img" />
         </div>
-        </div>,
-        ModalRoot
+      </div>,
+      ModalRoot
     );
   }
 }
 
+
 Modal.propTypes = {
-    image: PropTypes.object,
-    onClose: PropTypes.func,
-}
+  image: PropTypes.object,
+  onClose: PropTypes.func,
+};
