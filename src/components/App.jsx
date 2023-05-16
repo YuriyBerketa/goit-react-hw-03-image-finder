@@ -22,7 +22,7 @@ export class App extends Component {
   handleSubmit = async inputData => {
     page = 1;
     if (inputData.trim() === '') {
-      Notiflix.Notify.info('You cannot search by empty field, try again.');
+      Notiflix.Notify.info('Я не знаю, що шукати:(');
       return;
     } else {
       try {
@@ -31,7 +31,7 @@ export class App extends Component {
         if (hits.length < 1) {
           this.setState({ status: 'idle' });
           Notiflix.Notify.failure(
-            'Sorry, there are no images matching your search query. Please try again.'
+            'Вибачте, але за вашим запитом нічого не знайдено'
           );
         } else {
           this.setState({
