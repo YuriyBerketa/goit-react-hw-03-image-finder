@@ -6,8 +6,8 @@ export const Loader = () => {
         <div className="Spinner">
             <FidgetSpinner
                 visible={true}
-                height="80"
-                width="80"
+                height="150"
+                width="150"
                 ariaLabel="dna-loading"
                 wrapperStyle={{}}
                 wrapperClass="dna-wrapper"
